@@ -1,0 +1,103 @@
+@import 'breakpoint';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$primary: #374758;
+$secondary: #ffe26e;
+$warning: $secondary;
+$danger: $secondary;
+
+$bg-color: rgb(15 23 42);
+$primary-text-color: white;
+$secondary-text-color: rgb(148 163 184);
+$border-color: rgb(30 41 59);
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'danger': $danger,
+  'bg-color': $bg-color
+);
+
+body {
+  background-color: $bg-color;
+  color: $secondary-text-color;
+  font-size: large;
+
+  @include tablet_and_bigger {
+    font-size: large;
+  }
+}
+
+h2 {
+  color: $primary-text-color;
+  font-size: x-large;
+  padding-bottom: 3px;
+
+  @include tablet_and_bigger {
+    font-size: xx-large;
+    padding-bottom: 7px;
+  }
+}
+
+section {
+  margin-left: 3px;
+  margin-right: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+
+  @include tablet_and_bigger {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.card {
+  background-color: $bg-color;
+  color: $secondary-text-color;
+  border-color: $border-color;
+  border-width: 2px;
+  // padding-left: 2px;
+  // padding-right: 2px;
+}
+
+.form-control {
+  background-color: $primary;
+  border-color: $border-color;
+  color: $primary-text-color;
+
+  &::placeholder {
+    color: $secondary-text-color;
+  }
+
+  &:focus,
+  &:active {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+.input-group-text {
+  background-color: $primary;
+  color: $secondary-text-color;
+  border-color: $border-color;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+
+  .nav-link {
+    color: $primary-text-color;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: white;
+      text-underline-offset: 25%;
+    }
+  }
+}
