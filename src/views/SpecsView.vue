@@ -20,7 +20,7 @@
         To add the relay to your nostr client, copy/paste this address:
       </p>
       <p>
-        <span id="wsAddressText" @click="copyToClipboard()" class="text-white fw-semibold">{{
+        <span id="wsAddressText" class="text-white fw-semibold">{{
           wsAddress }}</span>
       </p>
       <p>
@@ -31,30 +31,32 @@
 </template>
 
 <script setup lang="ts">
-// import bootstrap, { Tooltip } from 'bootstrap'
-import { ref, onMounted } from 'vue'
+// todo! Fix tooltip does not work
+// import type { Tooltip } from 'bootstrap'
+import { ref, onMounted, type Ref } from 'vue'
+// const bootstrap = await import('bootstrap')
 
 const wsAddress = ref('wss://nostr.bitcoinvn.io')
 
-let tooltip: Tooltip
+// let tooltip: Tooltip
 
-function copyToClipboard() {
-  navigator.clipboard.writeText(wsAddress.value)
-  tooltip.setContent({ '.tooltip-inner': 'Copied to clipboard' })
-  setTimeout(() => {
-    tooltip.setContent({ '.tooltip-inner': 'Click to copy' })
-  }, 3000)
-}
+// function copyToClipboard() {
+//   navigator.clipboard.writeText(wsAddress.value)
+//   tooltip.setContent({ '.tooltip-inner': 'Copied to clipboard' })
+//   setTimeout(() => {
+//     tooltip.setContent({ '.tooltip-inner': 'Click to copy' })
+//   }, 3000)
+// }
 
-onMounted(() => {
-  const wsAddress = document.getElementById('wsAddressText')
-  if (!wsAddress) {
-    return
-  }
+// onMounted(() => {
+//   const wsAddress = document.getElementById('wsAddressText')
+//   if (!wsAddress) {
+//     return
+//   }
 
-  tooltip = new bootstrap.Tooltip(wsAddress, {
-    title: "Click to copy",
-    trigger: 'hover'
-  })
-})
+//   tooltip = new bootstrap.Tooltip(wsAddress, {
+//     title: "Click to copy",
+//     trigger: 'hover'
+//   })
+// })
 </script>
