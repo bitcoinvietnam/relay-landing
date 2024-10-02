@@ -13,10 +13,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/specs">Specs</a>
+            <router-link class="nav-link" to="/specs">Specs</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/tos">Terms of Service</a>
+            <router-link class="nav-link" to="/tos">Terms of Service</router-link>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="/">Contact</a>

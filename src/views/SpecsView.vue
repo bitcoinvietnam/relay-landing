@@ -24,7 +24,8 @@
           wsAddress }}</span>
       </p>
       <p>
-        Usernames and the BitcoinVN Nostr relay services are subject to <a href="/tos">Terms of Service</a>.
+        Usernames and the BitcoinVN Nostr relay services are subject to <router-link to="/tos">Terms
+          of Service</router-link>.
       </p>
     </section>
   </div>
