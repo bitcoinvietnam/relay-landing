@@ -9,7 +9,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: { title: 'BV Relay' }
     },
     {
       path: '/specs',
@@ -17,7 +18,8 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: SpecsView
+      component: SpecsView,
+      meta: { title: 'Specification' }
     },
     {
       path: '/tos',
@@ -25,9 +27,16 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: TosView
+      component: TosView,
+      meta: { title: 'Terms of Service' }
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  const defaultTitle = 'BV Relay'
+  document.title = (to.meta.title as string) || defaultTitle
+  next()
 })
 
 export default router
