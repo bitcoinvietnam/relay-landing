@@ -2,10 +2,10 @@
   <nav class="navbar navbar-expand-lg sticky-top text-light px-2 px-md-5"
     :class="scrollPosition > 50 ? 'bg-dark' : 'bg-transparent'">
     <div class="container-fluid">
-      <a class="navbar-brand text-reset" href="/">
+      <router-link class="navbar-brand text-reset" to="/">
         <img src="@/assets/bvn-star.svg" alt="Logo" width="26" height="26" class="d-inline-block align-text-top">
         BV <span class="text-white fw-medium">Relay</span>
-      </a>
+      </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
