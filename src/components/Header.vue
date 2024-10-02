@@ -32,26 +32,20 @@
   </nav>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      scrollPosition: 0
-    };
-  },
+<script lang="ts" setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
+let scrollPosition = ref(0)
 
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
 
-  methods: {
-    handleScroll() {
-      this.scrollPosition = window.scrollY;
-    }
-  }
-};
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
+const handleScroll = () => {
+  scrollPosition.value = window.scrollY
+}
 </script>
