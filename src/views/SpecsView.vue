@@ -11,10 +11,9 @@
       </p>
       <ul>
         <li> Location: South East Asia </li>
-        <li> vCores: 4 </li>
-        <li> Memory: 8GB RAM </li>
-        <li> Storage: 160GB SSD </li>
-        <li> OS: Ubuntu 22.04 </li>
+        <li> CPU: Intel Pentium Silver N6005 Quad Core</li>
+        <li> Memory: 24GB RAM </li>
+        <li> Storage: 120GB SSD </li>
       </ul>
       <p>
         To add the relay to your nostr client, copy/paste this address:
