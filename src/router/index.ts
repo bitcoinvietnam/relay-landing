@@ -15,20 +15,20 @@ const router = createRouter({
     {
       path: '/specs',
       name: 'specs',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: SpecsView,
       meta: { title: 'Specification' }
     },
     {
       path: '/tos',
       name: 'tos',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: TosView,
       meta: { title: 'Terms of Service' }
+    },
+    // Catch-all route (must be placed last)
+    {
+      path: '/:catchAll(.*)', // Regex to match all undefined routes
+      name: 'NotFound',
+      redirect: '/'
     }
   ]
 })
